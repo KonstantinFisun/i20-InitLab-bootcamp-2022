@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.container{
+    margin: 5%;
+    width: 800px;
+    height: auto;
+}
+
+.row{
+    padding: 10px 5px;
+    background-color: #eeeeee; 
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    position: relative;
+    width: 31%;
+    height: 300px;
+    
+}
+
+.number{
+    height: 83%;
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    font-size: 120px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding-bottom: 10px;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.title{
+    vertical-align: middle;
+    padding-top: 13px;
+    padding-left: 10px;
+    font-size: 22px;
+    height: 12%;
+    background-color: #ffffff;
+    box-shadow: 0.2em 0.2em 3px rgba(122,122,122,0.5);
+}
+
+.flip{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    position: absolute;
+    top: 77%; left: 73%; bottom: 0; right: 0;
+    width: 40px;
+    height: 35px;
+    background-color: #4d88ef;
+    border: 0px solid;
+    border-radius: 50%;
+}
