@@ -7,14 +7,14 @@ body{
 
 table{
     border: 2px solid #CCCCCC;
-	border-radius: 2px;
+    border-radius: 2px;
 }
 
 td{
     border: 2px solid #CCCCCC;
-	border-radius: 2px;
-	text-align: center;
-	padding:10px;
+    border-radius: 2px;
+    text-align: center;
+    padding:10px;
     text-align: center;
     width: 150px;
 }
