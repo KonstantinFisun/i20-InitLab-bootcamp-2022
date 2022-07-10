@@ -1,29 +1,17 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Arsenal', sans-serif;
-    color:black;
+table, td{
+   border: 1px solid #CCCCCC ;
+   text-align: center;
 }
 
-table{
-    border: 2px solid #CCCCCC;
-    border-radius: 2px;
-}
-
-td{
-    border: 2px solid #CCCCCC;
-    border-radius: 2px;
-    text-align: center;
-    padding:10px;
-    text-align: center;
-    width: 150px;
-}
-
-.year{
+thead{
     font-weight: 600;
 }
 
-.name{
-    width: 200px;
+td{
+    width: 150px;
+}
+
+td:first-child{
     text-align: left;
+    width: 300px;
 }
