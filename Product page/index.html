@@ -4,12 +4,78 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    </script>
 </head>
 <body>
     <div class="layout">
         <div class="product">
-            <div class="product_view"></div>
-            <div class="product_description"></div>
+            <div class="product__view">
+                <div class="product__view-left">
+                   <div class="product__view-item">
+                       <img src="Photo/1.png" alt="Medicine">
+                   </div>
+                   <div class="product__view-item">
+                       <img src="Photo/2.png" alt="Medicine">
+                   </div>
+                   <div class="product__view-item">
+                       <img src="Photo/3.png" alt="Medicine">
+                   </div>
+                </div>
+                <div class="product__view-main">
+                    <img src="Photo/Main.png" alt="Medicine">
+                </div>
+            </div>
+            <div class="product__description">
+                <h1 class="product__title">Рубашка Medicine</h1>
+                <div class="product__tag">
+                    <a href="#">Рубашка Medicine</a>
+                    <a href="#">Все модели Medicine</a>
+                    <a href="#">Рубашки</a>
+                </div>
+                <div class="product__price">
+                    <div class="product__price-actual">
+                        <span class="product__actual-old">2 699</span>
+                        <span class="product__actual-current rub">2 499</span>
+                    </div>
+                    <div class="product__price-discond">
+                        <span class="product__discond-value rub">2 227</span>
+                        <span class="product__discond-text">- с промокодом</span>
+                    </div>
+                    
+                </div>
+                <div class="product__info">
+                    <div class="product__info-item">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                        В наличии в магазине 
+                        <a href="#">Lamoda</a>
+                    </div>
+                    <div class="product__info-item">
+                        <ion-icon name="car-outline"></ion-icon>
+                        Бесплатная доставка
+                    </div>
+                </div>
+                <div class="product__actions">
+                    <button class="product__button button-blue">В магазин</button>
+                    <button class="product__button">В избранное</button>
+                </div>
+                <div class="product__text">
+                    <p>
+                        Рубашка Medicine выполнена из вискозной ткани с клетчатым узором. 
+                        Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.
+                    </p>
+                </div>
+                <div class="product__share">
+                    <span class="product__share-text">Поделиться:</span> 
+                    <a href="#"><ion-icon name="logo-vk"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+                    <a href="#"><ion-icon name="chatbubble-outline"></ion-icon></a>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </body>
