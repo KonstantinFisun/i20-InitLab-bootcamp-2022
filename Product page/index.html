@@ -7,6 +7,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
     </script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
@@ -57,8 +58,17 @@
                         Бесплатная доставка
                     </div>
                 </div>
+                <div class="product__counter">
+                    <span class="product__counter-text">Количество товара:</span>
+                    <div class="product__counter-item">
+                        <div class="minus"><ion-icon name="remove-outline"></ion-icon></div>
+                        <input class='product__counter-value' type="number" value="1" step="1" min="1" max="100">
+                        <div class="plus"><ion-icon name="add-outline"></ion-icon></div>
+                    </div>
+                    
+                </div>
                 <div class="product__actions">
-                    <button class="product__button button-blue">В магазин</button>
+                    <button class="product__button button-blue">Купить</button>
                     <button class="product__button">В избранное</button>
                 </div>
                 <div class="product__text">

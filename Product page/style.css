@@ -158,8 +158,58 @@ a{
 
 /*-------------------------*/
 
+.product__counter{
+    margin-top:40px;
+    display: flex;
+}
+
+.product__counter-text{
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 15px;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__counter-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #dddddd;
+}
+
+.product__counter-value{
+    text-decoration: none;
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #dddddd;
+    background-color: #eeeeee;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.product__counter ion-icon{
+    color: #000000; 
+    height: 19px;
+}
+
+.minus, .plus{
+    cursor: pointer;
+}
+
+/*-------------------------*/
+
 .product__actions{
-    margin-top:50px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -177,6 +227,9 @@ a{
     text-transform: uppercase;
     letter-spacing: 0.65px;
     min-width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-blue{
