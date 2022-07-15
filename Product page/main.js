@@ -1,3 +1,4 @@
+//Реализация зума
 function hoverOnFirst(){
     document.querySelectorAll('.product__view-main')[0].style.backgroundImage = "url('Photo/1.png')"
 }
@@ -14,7 +15,9 @@ function hoverBack(){
     document.querySelectorAll('.product__view-main')[0].style.backgroundImage = "url('Photo/Main.png')"
 }
 
+
 $(document).ready(function() {
+    //Обработка счетчика товара
     $("body").on('focusout', '.product__counter-value', function(){
         if($(this).val() < 1){
             $(this).val('1');
@@ -26,6 +29,8 @@ $(document).ready(function() {
             $(this).val(Math.round($(this).val()));
         }
     });
+    
+    //Обработка уменьшения
     $('.minus').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) - 1;
@@ -33,6 +38,8 @@ $(document).ready(function() {
         $input.val(count);
         $input.change();
     });
+    
+    //Обработка добавления
     $('.plus').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) + 1;
@@ -40,5 +47,18 @@ $(document).ready(function() {
         $input.val(count);
     });
     
-  
+    //Уведомление
+    $('.product__button.button-blue').on('click', function () {
+    var count = $(".product__counter-value").val();
+    $.toast({ 
+        text: `В <a href="#">корзину</a> добавлено ${count} товаров!`,
+        hideAfter: false,
+        icon: 'success',
+        position:'bottom-right',
+        hideAfter: 3000,
+    })
+    });
+    
 });	
+
+
