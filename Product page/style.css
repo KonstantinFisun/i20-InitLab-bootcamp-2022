@@ -4,8 +4,8 @@
   font-weight: 300;
 
   src: local("Circe"),
-       url("/fonts/circe/circe_300.woff2") format("woff2"),
-       url("/fonts/circe/circe_300.woff") format("woff");
+       url("fonts/circe/circe_300.woff2") format("woff2"),
+       url("fonts/circe/circe_300.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-weight: 600;
 
   src: local("Circe"),
-       url("/fonts/circe/circe_600.woff2") format("woff2"),
-       url("/fonts/circe/circe_600.woff") format("woff");
+       url("fonts/circe/circe_600.woff2") format("woff2"),
+       url("fonts/circe/circe_600.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-weight: 700;
 
   src: local("Circe"),
-       url("/fonts/circe/circe_700.woff2") format("woff2"),
-       url("/fonts/circe/circe_700.woff") format("woff");
+       url("fonts/circe/circe_700.woff2") format("woff2"),
+       url("fonts/circe/circe_700.woff") format("woff");
 }
 
 
@@ -150,6 +150,7 @@ a{
 
 .product__actual-current{
     color: #9a9a9a;
+    font-weight: 600;
 }
 
 .rub::after{
@@ -158,6 +159,10 @@ a{
 
 .product__price-discond{
     margin-left: 54px;
+}
+
+.product__discond-value{
+   font-weight: 600; 
 }
 
 .product__discond-text{
