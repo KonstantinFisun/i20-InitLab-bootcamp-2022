@@ -32,8 +32,8 @@ $(document).ready(function() {
     
     //Обработка уменьшения
     $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
+        let $input = $(this).parent().find('input');
+        let count = parseInt($input.val()) - 1;
         count = count < 1 ? 1 : count;
         $input.val(count);
         $input.change();
@@ -41,15 +41,15 @@ $(document).ready(function() {
     
     //Обработка добавления
     $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) + 1;
+        let $input = $(this).parent().find('input');
+        let count = parseInt($input.val()) + 1;
         count = count > 100 ? 100 : count;
         $input.val(count);
     });
     
     //Уведомление
     $('.product__button.button-blue').on('click', function () {
-    var count = $(".product__counter-value").val();
+    let count = $(".product__counter-value").val();
     $.toast({ 
         text: `В <a href="#">корзину</a> добавлено ${count} товаров!`,
         hideAfter: false,
