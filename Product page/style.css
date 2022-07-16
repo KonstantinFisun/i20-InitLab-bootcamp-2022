@@ -286,6 +286,8 @@ input::-webkit-inner-spin-button {
 /*-------------------------*/
 
 .product__share{
+    display: flex;
+    align-items: center;
     margin-top: 36px;
 }
 
@@ -309,6 +311,36 @@ input::-webkit-inner-spin-button {
 
 .product__share ion-icon:hover{
     color: #000000;
+}
+
+
+.product__share-nameplate{
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 13px;
+    background-color: #efefef;
+    position: relative;
+    color: #131313;
+    height: 30px;
+    transition: outline 0.5s linear;
+    display: flex;
+    align-items: center;
+}
+
+.product__share-nameplate::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    border: 5px solid transparent;
+    border-right: 5px solid #efefef;
+}
+
+.product__share-nameplate:hover::before{
+    border-right-color: #131313;
+}
+
+.product__share-nameplate:hover{
+    outline: 1px solid #131313;
 }
 
 /*-------------------------*/
