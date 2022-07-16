@@ -1,22 +1,28 @@
-//Реализация зума
-function hoverOnFirst(){
-    document.querySelector('.product__view-main').style.backgroundImage = "url('Photo/1.png')"
-}
-
-function hoverOnSecond(){
-    document.querySelector('.product__view-main').style.backgroundImage = "url('Photo/2.png')"
-}
-
-function hoverOnThree(){
-    document.querySelector('.product__view-main').style.backgroundImage = "url('Photo/3.png')"
-}
-
-function hoverBack(){
-    document.querySelector('.product__view-main').style.backgroundImage = "url('Photo/Main.png')"
-}
-
 
 $(document).ready(function() {
+    
+    //Реализация зума
+    
+    //Массив блоков с боковыми картинками
+    let imgsItems = document.querySelectorAll('.product__view-item img')
+    let mainImg = document.querySelector('.product__view-main')
+    
+    //Цикл по массиву
+    imgsItems.forEach((item) =>{
+        //Слушатель на наведение картинка
+        item.addEventListener('mouseover', function(){
+            let path = item.getAttribute('src')
+            mainImg.style.backgroundImage = `url(${path})`
+        })
+        //Слушатель на уход с картинки
+        item.addEventListener('mouseout', function() {
+            mainImg.style.backgroundImage = `url('Photo/Main.png')` 
+        })
+    })
+    
+    
+    
+    
     //Обработка счетчика товара
     $("body").on('focusout', '.product__counter-value', function(){
         if($(this).val() < 1){
