@@ -1,5 +1,7 @@
 use clothing_store;
 
+ALTER TABLE image CHANGE COLUMN alt alt VARCHAR(150) NOT NULL;
+
 -- Информация для Category
 INSERT INTO category (title, description) VALUES 
 ('Одежда', 'Модная одежда на каждый день.'), 
