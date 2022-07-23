@@ -25,10 +25,10 @@ CREATE TABLE product (
   price_with_promocode INT UNSIGNED NULL,
   description VARCHAR(150) NULL,
   in_stock TINYINT NOT NULL DEFAULT 1,
-  main_image INT NOT NULL,
+  main_image INT NULL,
   main_category INT NOT NULL,
   PRIMARY KEY (product_id),
-  CONSTRAINT FK_Product_Image FOREIGN KEY (main_image) REFERENCES image (image_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT FK_Product_Image FOREIGN KEY (main_image) REFERENCES image (image_id) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT FK_Product_Category FOREIGN KEY (main_category) REFERENCES category (category_id) ON DELETE CASCADE ON UPDATE CASCADE);
   
 -- Создание таблицы Category_Product
