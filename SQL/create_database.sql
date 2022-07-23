@@ -1,4 +1,3 @@
-
 -- Создание базы данных
 create database clothing_store;
 use clothing_store;
@@ -6,7 +5,7 @@ use clothing_store;
 -- Создание таблицы Category
 CREATE TABLE category (
   category_id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(45) NOT NULL,
+  title VARCHAR(75) NOT NULL,
   description VARCHAR(150) NOT NULL,
   PRIMARY KEY (category_id));
 
@@ -14,13 +13,13 @@ CREATE TABLE category (
 CREATE TABLE image (
   image_id INT NOT NULL AUTO_INCREMENT,
   url TEXT(150) NOT NULL,
-  alt VARCHAR(45) NOT NULL,
+  alt VARCHAR(150) NOT NULL,
   PRIMARY KEY (image_id));
   
 -- Создание таблицы Product
 CREATE TABLE product (
   product_id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR(45) NOT NULL,
+  title VARCHAR(75) NOT NULL,
   price INT UNSIGNED NOT NULL,
   price_without_discount INT UNSIGNED NULL,
   price_with_promocode INT UNSIGNED NULL,
