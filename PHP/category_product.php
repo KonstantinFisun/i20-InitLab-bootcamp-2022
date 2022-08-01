@@ -1,4 +1,7 @@
 <?php
+
+    # Обновляем путь
+    $path = "";
     # id категории
     $id = (int) $_GET['cat_id'];
     # Количество товаров в категории
@@ -32,7 +35,7 @@
     
     # Если категория пустая
     if (empty($products))
-        header("Location: 404.php");
+        header("Location: error_404.php");
     
     # Обновляем название header
     $title = $category['title'];

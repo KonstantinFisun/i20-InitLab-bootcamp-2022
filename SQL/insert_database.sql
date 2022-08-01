@@ -33,10 +33,15 @@ INSERT INTO image (url, alt) VALUES
 ('img/clothes/Guess_Jeans_Main.png', 'Джинсы Guess Jeans'),
 ('img/clothes/Sela_Main.png', 'Плащ Sela'),
 ('img/clothes/Trousers_Olsi_Main.png', 'Брюки Olsi'),
+('img/clothes/Medicine_Main.png', 'Рубашка Medicine'),
+('img/clothes/Medicine_1.png', 'Рубашка Medicine сзади'),
+('img/clothes/Medicine_2.png', 'Рубашка Medicine спереди'),
+('img/clothes/Medicine_3.png', 'Рубашка Medicine в полный рост'),
 ('img/clothes/Vittoria_Vicci_Main.png', 'Платье Vittoria Vicci');
 
 -- Информация для Product
 INSERT INTO product (title, price, price_without_discount, price_with_promocode, description, in_stock, main_image, main_category) VALUES 
+('Рубашка Medicine', '2499', '2699', '2227', 'Рубашка Medicine выполнена из вискозной ткани с клетчатым узором. Детали: прямой крой; отложной воротник; планка и манжеты на пуговицах; карман на груди.', '1', (select image_id from image where url='img/clothes/Medicine_Main.png'), (select category_id from category where title='Одежда')),
 ('Платье Trends Brands', '3990', '4500', NULL, NULL, '1', (select image_id from image where url='img/clothes/Trends_Brands_Main.png'), (select category_id from category where title='Одежда')),
 ('Джинсовая куртка Tom Tailor', '3649', '7590', '3249', 'Джинсовая куртка выполнена из хлопкового денима.', '1', (select image_id from image where url='img/clothes/Tom_Tailor_Main.png'), (select category_id from category where title='Одежда')),
 ('Брюки O\'stin','2999','3500', NULL, NULL, '1', (select image_id from image where url='img/clothes/O\'stin_Main.png'), (select category_id from category where title='Одежда')),
@@ -79,7 +84,11 @@ INSERT INTO image_product VALUES
 ((select image_id from image where url='img/clothes/Tom_Tailor_1.png'), (select product_id from product where title='Джинсовая куртка Tom Tailor')),
 ((select image_id from image where url='img/clothes/Tom_Tailor_2.png'), (select product_id from product where title='Джинсовая куртка Tom Tailor')),
 ((select image_id from image where url='img/clothes/Tom_Tailor_3.png'), (select product_id from product where title='Джинсовая куртка Tom Tailor')),
-((select image_id from image where url='img/accessories/Karl_Lagerfeld_1.png'), (select product_id from product where title='Бейсболка Karl Lagerfeld'));
+((select image_id from image where url='img/accessories/Karl_Lagerfeld_1.png'), (select product_id from product where title='Бейсболка Karl Lagerfeld')),
+((select image_id from image where url='img/clothes/Medicine_Main.png'), (select product_id from product where title='Рубашка Medicine')),
+((select image_id from image where url='img/clothes/Medicine_1.png'), (select product_id from product where title='Рубашка Medicine')),
+((select image_id from image where url='img/clothes/Medicine_2.png'), (select product_id from product where title='Рубашка Medicine')),
+((select image_id from image where url='img/clothes/Medicine_3.png'), (select product_id from product where title='Рубашка Medicine'));
 
 -- Доп категории для Product
 INSERT INTO category_product VALUES
@@ -100,6 +109,8 @@ INSERT INTO category_product VALUES
 ((select category_id from category where title='Обувь'), (select product_id from product where title='Лоферы Tervolina')),
 ((select category_id from category where title='Обувь'), (select product_id from product where title='Кеды SAINT TROPEZ')),
 ((select category_id from category where title='Одежда'), (select product_id from product where title='Платье Trends Brands')),
+((select category_id from category where title='Одежда'), (select product_id from product where title='Рубашка Medicine')),
+((select category_id from category where title='Скидки'), (select product_id from product where title='Рубашка Medicine')),
 ((select category_id from category where title='Одежда'), (select product_id from product where title='Джинсовая куртка Tom Tailor')),
 ((select category_id from category where title='Скидки'), (select product_id from product where title='Джинсовая куртка Tom Tailor')),
 ((select category_id from category where title='Скидки'), (select product_id from product where title='Лоферы Tervolina')),

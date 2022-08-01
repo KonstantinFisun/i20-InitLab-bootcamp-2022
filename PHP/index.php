@@ -5,19 +5,17 @@
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     }
-     if (!empty($_GET)) {
+    if (!empty($_GET)) {
         if (isset($_GET['cat_id']))
             include 'category_product.php';
-     }
+        elseif (isset($_GET['id']))
+            include 'product.php';
+        else {
+            include("Location: 404.php");
+        }
+    }
     else{
         include 'category.php';
     }
     
 ?>
-<!--
-    
-    $db->exec("SET NAMES UTF-8");
-
-    
-?>
--->
