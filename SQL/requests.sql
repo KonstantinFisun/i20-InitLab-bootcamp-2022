@@ -4,7 +4,7 @@ FROM category
 JOIN category_product ON category.category_id = category_product.category_id
 JOIN product ON product.product_id = category_product.product_id
 WHERE product.in_stock = 1
-GROUP BY category.category_id, category.title
+GROUP BY category.category_id
 ORDER BY count_product DESC;
 
 # Запрос, возвращающий 12 товаров заданной категории
@@ -38,4 +38,17 @@ WHERE product.product_id = 1;
 SELECT title
 FROM category 
 JOIN category_product ON category.category_id = category_product.category_id
-WHERE category_product.product_id = 1
+WHERE category_product.product_id = 1;
+
+# Запрос, возвращающий категории с количеством товаров внутри, даже если товаров в них нет
+SELECT category.category_id, category.title, count(category_product.product_id) as count_product
+FROM category
+LEFT JOIN category_product ON category.category_id = category_product.category_id
+GROUP BY category.category_id;
+
+# Запрос, возвращающий категории с количеством товаров внутри больше 2
+SELECT category.category_id, category.title, count(category_product.product_id) as count_product
+FROM category
+JOIN category_product ON category.category_id = category_product.category_id
+GROUP BY category.category_id
+HAVING count_product > 2;
