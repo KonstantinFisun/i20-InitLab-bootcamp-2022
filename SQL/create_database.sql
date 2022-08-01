@@ -23,7 +23,7 @@ CREATE TABLE product (
   price INT UNSIGNED NOT NULL,
   price_without_discount INT UNSIGNED NULL,
   price_with_promocode INT UNSIGNED NULL,
-  description VARCHAR(150) NULL,
+  description VARCHAR(350) NULL,
   in_stock TINYINT NOT NULL DEFAULT 1,
   main_image INT NULL,
   main_category INT NOT NULL,

@@ -1,11 +1,37 @@
 @font-face {
-	font-family: 'Circe';
-    src: url('font/Circe-Regular.woff2');
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 300;
+
+  src: local("Circe"),
+       url("fonts/circe/circe_300.woff2") format("woff2"),
+       url("fonts/circe/circe_300.woff") format("woff");
 }
+
 @font-face {
-    font-family: 'Adine';
-    src: url('font/AdineKirnberg-Regular.woff');
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 600;
+
+  src: local("Circe"),
+       url("fonts/circe/circe_600.woff2") format("woff2"),
+       url("fonts/circe/circe_600.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+
+  src: local("Circe"),
+       url("fonts/circe/circe_700.woff2") format("woff2"),
+       url("fonts/circe/circe_700.woff") format("woff");
+}
+
+a{
+    text-decoration: none;
+}
+
 .layout {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,13 +46,12 @@ header {
     color: black;
     display: flex;
 }
-a.header__return{
-    margin-top:20px;
-    width: 160px;
-    height: 100%;
-    padding-left: 40px;
+.header__return{
+    margin-top: 20px;
+    width: 140px;
+    height: 50%;
+    margin-left: 40px;
     display: none;
-    
 }
 
 .return__content{
@@ -35,7 +60,6 @@ a.header__return{
     position: relative;
     text-align: center;
     vertical-align: middle;
-    justify-content: space-between;
 }
 
 .return__icon{
@@ -46,6 +70,7 @@ a.header__return{
 }
 
 .return__text{
+    margin-left: 15px;
     position: absolute;
     top: 50%;
     left: 50%;

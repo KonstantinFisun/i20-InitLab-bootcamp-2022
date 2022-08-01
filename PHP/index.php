@@ -5,8 +5,14 @@
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     }
+     if (!empty($_GET)) {
+        if (isset($_GET['cat_id']))
+            include 'category_product.php';
+     }
+    else{
+        include 'category.php';
+    }
     
-    include 'category.php';
 ?>
 <!--
     
