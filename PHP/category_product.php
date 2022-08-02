@@ -51,7 +51,7 @@
 </head>
 <body>
     <div class="layout">
-        <?php include "header.php"?>
+        <?php require_once "header.php"?>
         <div class="category__description"><?=$category['description']?></div>
         <div class="category__products">
             <?php foreach ($products as $product): ?>
@@ -73,6 +73,6 @@
             }
             ?>
         </div>
-        
+        <?php require_once "footer.php"?>
     </div>
 </body>

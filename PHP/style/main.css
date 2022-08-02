@@ -31,6 +31,7 @@ a{
     margin: 15px auto;
     font-family: Circe, sans-serif;
     background-color: #efefef;
+    position: relative;
 }
 header {
     width: 100%;
@@ -40,6 +41,18 @@ header {
     color: black;
     display: flex;
 }
+
+
+.feedback{
+    position:fixed;
+    left: 40px;
+	bottom: 40px;
+	width: 100px;
+	height: 100px;
+}
+
+
+
 .header__return{
     width: 140px;
     height: 50%;

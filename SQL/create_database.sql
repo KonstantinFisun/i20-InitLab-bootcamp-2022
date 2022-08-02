@@ -46,3 +46,13 @@ CREATE TABLE product (
   PRIMARY KEY (image_id, product_id),
   CONSTRAINT FK_ImageI FOREIGN KEY (image_id) REFERENCES image (image_id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT FK_ProductI FOREIGN KEY (product_id) REFERENCES product (product_id) ON DELETE CASCADE ON UPDATE CASCADE);
+  
+  CREATE TABLE feedback (
+  feedback_id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  db INT NOT NULL,
+  gender VARCHAR(1) NOT NULL,
+  subject VARCHAR(45) NOT NULL,
+  message VARCHAR(400) NOT NULL,
+  PRIMARY KEY (feedback_id));

@@ -27,7 +27,7 @@
 <body>
     <div class="layout">
          <!--p>Подключаем заголовок</p-->
-        <?php include "header.php"?>
+        <?php require_once "header.php"?>
         <div class="categories">
             <?php foreach ($categories as $category): ?>
             <div class="card">
@@ -42,5 +42,6 @@
             </div>
             <?php endforeach ?>   
         </div>
+        <?php require_once "footer.php"?>
     </div>
 </body>

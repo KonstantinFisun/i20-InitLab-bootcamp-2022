@@ -11,7 +11,8 @@
         elseif (isset($_GET['id']))
             include 'product.php';
         else {
-            include("Location: 404.php");
+            include("Location: error_404.php");
+            exit;
         }
     }
     else{

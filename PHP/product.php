@@ -66,7 +66,7 @@
 </head>
 <body>
     <div class="layout">
-        <?php include "header.php"?>
+        <?php require_once "header.php"?>
         <div class="product">
             <div class="product__view">
                 <div class="product__view-left">
@@ -145,6 +145,7 @@
                 </div>
             </div>
         </div>
+        <?php require_once "footer.php"?>
     </div>
     <script type="text/javascript" src="Script/main.js"></script>
 </body>
